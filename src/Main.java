@@ -1,14 +1,22 @@
+import techsol.Empleado;
+import techsol.EmpleadoAsalariado;
+import techsol.EmpleadoPorHoras;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
+        // Crear una lista de empleados
         List<Empleado> empleados = new ArrayList<>();
 
+        // 1. Crear Empleado Asalariado
         empleados.add(new EmpleadoAsalariado("Ana García", 101, 50000.00));
 
+        // 2. Crear Empleado Por Horas
+        // Salario Base 10000 + (Horas 150 * 100) = 25000
         empleados.add(new EmpleadoPorHoras("Luis Pérez", 102, 10000.00, 150));
 
+        // 3. Otro Empleado Asalariado
         empleados.add(new EmpleadoAsalariado("Marta Soto", 103, 75000.00));
 
 
