@@ -10,42 +10,38 @@ public abstract class Empleado {
         this.id = id;
         this.salarioBase = salarioBase;
     }
-
-    public double getSalarioBase() {
-        return salarioBase;
-    }
-
-    public void setSalarioBase(double salarioBase) {
-        this.salarioBase = salarioBase;
-    }
-
-    public double calcularSalario() {
-        return salarioBase;
-    }
-
+    
     public String getNombre() {
         return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
     }
 
     public int getId() {
         return id;
     }
 
+    public double getSalarioBase() {
+        return salarioBase;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
     public void setId(int id) {
         this.id = id;
     }
 
-    public void showInfo() {
-        System.out.println("Nombre: " + nombre);
+    public void setSalarioBase(double salarioBase) {
+        this.salarioBase = salarioBase;
+    }
+
+    public void mostrarInformacion() {
         System.out.println("ID: " + id);
-        System.out.println("Salario Base: " + salarioBase);
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Salario Base: $" + String.format("%.2f", salarioBase));
     }
 
     public abstract double calcularSueldoTotal();
 
-    public abstract double calcularSueldoPrestaciones();
+    public abstract double calcularPrestaciones();
 }

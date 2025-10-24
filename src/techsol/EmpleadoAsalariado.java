@@ -8,12 +8,19 @@ public class EmpleadoAsalariado extends Empleado {
 
     @Override
     public double calcularSueldoTotal() {
-        return this.salarioBase*1.1;
+        double bono = salarioBase * 0.10;
+        return salarioBase + bono;
     }
 
     @Override
-    public double calcularSueldoPrestaciones() {
-        return this.calcularSueldoTotal()*0.1;
+    public double calcularPrestaciones() {
+        double sueldoTotal = calcularSueldoTotal();
+        return sueldoTotal * 0.20;
     }
-    
+
+    @Override
+    public void mostrarInformacion() {
+        System.out.println("\nEmpleado Asalariado: ");
+        super.mostrarInformacion();
+    }
 }
